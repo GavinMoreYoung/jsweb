@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% block main %}
+    <div class="first_title">&nbsp;&nbsp;{{ clb }}
+    </div>
+    <ul>
+        {% for dy in i %}
+            <li>
+                <a href="/info/id={{ dy.id }}">
+                    <div class="film">
+                        <div class="film_img"><img src="../static/{{ dy.dytp }}"></div>
+                        <div class="film_title">{{ dy.dybt }}</div>
+                    </div>
+                </a>
+            </li>
+        {% empty %}
+            <div>&nbsp;&nbsp;数据没有更新，请骚等</div>
+        {% endfor %}
+
+    </ul>
+    </div>
+    <div class="ad_01"><img src="../static/img/ad01.jpg"></div>
+    <div style=" width:100%;text-align: center;">第{{ i.number }}页&emsp;共{{ i.paginator.num_pages }}页
+        <div class="page">
+            <ul class="pagination" style="line-height: 0;">
+                {% if o.has_previous %}
+                    <li>
+                        <a href="/list/?lb={{ lb }}" aria-label="Previous">
+                            <span aria-hidden="true">首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/list/?lb={{ lb }}&p={{ i.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">上一页&laquo;</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a>首页</a></li>
+                    <li><a>上一页</a></li>
+                {% endif %}
+                {% if o.has_next %}
+                    <li>
+                        <a href="/list/?lb={{ lb }}&p={{ i.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">下一页&raquo;</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="/list/?lb={{ lb }}&p={{ i.paginator.num_pages }}" aria-label="Next">
+                            <span aria-hidden="true">尾页</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a>下一页</a></li>
+                    <li><a>尾页</a></li>
+                {% endif %}
+            </ul>
+        </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% block main %}
+    <div class="first_title">&nbsp;&nbsp;作者随笔
+    </div>
+    <div class="wzlist">
+        <ul>
+            {% for wz in o %}
+                <li><a href="/wzinfo/{{ wz.id }}">{{ wz.wzbt }}</a></li>
+            {% empty %}
+                数据还没有更新
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="ad_01"><img src="../static/img/ad01.jpg"></div>
+    <div style=" width:100%;text-align: center;">第{{ o.number }}页&emsp;共{{ o.paginator.num_pages }}页
+        <div class="page">
+            <ul class="pagination" style="line-height: 0;">
+                {% if o.has_previous %}
+                    <li>
+                        <a href="/wz/" aria-label="Previous">
+                            <span aria-hidden="true">首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wz/?p={{ o.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">上一页&laquo;</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a>首页</a></li>
+                    <li><a>上一页</a></li>
+                {% endif %}
+                {% if o.has_next %}
+                    <li>
+                        <a href="/wz/?p={{ o.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">下一页&raquo;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/wz/?p={{ o.paginator.num_pages }}" aria-label="Next">
+                            <span aria-hidden="true">尾页</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a>下一页</a></li>
+                    <li><a>尾页</a></li>
+                {% endif %}
+            </ul>
+        </div>
+{% endblock %}

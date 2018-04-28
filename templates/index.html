@@ -1,0 +1,36 @@
+{% extends 'base/base.html'  %}
+{% block main %}
+<ul>
+        <div class="first_title">&nbsp;&nbsp;院线热映
+            <div style="float:right;"><a href="list/?lb=1">更多></a></div>
+        </div>
+    {% for dy in o %}
+        <li>
+            <a href="/info/?id={{ dy.id }}">
+                <div class="film">
+                    <div class="film_img"><img src="../static/{{ dy.dytp }}"></div>
+                    <div class="film_title">{{ dy.dybt }}</div>
+                </div>
+            </a>
+        </li>
+        {% empty %}
+        <div>&nbsp;&nbsp;数据没有更新，请骚等</div>
+        {% endfor %}
+        <div class="ad_01"><img src="../static/img/ad02.jpg"></div>
+        <div class="first_title">&nbsp;&nbsp;人生必看
+            <div style="float:right;"><a href="/list/?lb=2">更多></a></div>
+        </div>
+        {% for dy in i %}
+        <li>
+            <a href="/info/?id={{ dy.id }}">
+                <div class="film">
+                    <div class="film_img"><img src="../static/{{ dy.dytp }}"></div>
+                    <div class="film_title">{{ dy.dybt }}</div>
+                </div>
+            </a>
+        </li>
+        {% empty %}
+        <div>&nbsp;&nbsp;数据没有更新，请骚等</div>
+        {% endfor %}
+    </ul>
+{% endblock %}

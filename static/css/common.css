@@ -1,0 +1,165 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+div {
+    float: left;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+video {
+    width: 100%;
+}
+
+.top {
+    width: 100%;
+    margin-top: 1em;
+    height: 150px;
+}
+
+.top_logo {
+    width: 30%;
+}
+
+.top_logo img {
+    width: 250px;
+    height: 140px;
+    display: inherit;
+}
+
+.top_find {
+    margin: 35px 0 0 0;
+    width: 70%;
+}
+
+.nav {
+    width: 100%;
+    background: #e4b9b9;
+    height: 50px;
+}
+
+.nav li {
+    width: 20%;
+    float: left;
+    height: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    color: #c7254e;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.ad_01 {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ad_01 img {
+    width: 100%;
+}
+
+.first_title {
+    width: 100%;
+    padding: 0.5em;
+    margin: 1px 0;
+    height: 110px;
+    font-weight: bold;
+    font-size: 50px;
+    border: 1px solid #e7e7e7;
+}
+
+.film_main {
+    width: 100%;
+}
+
+.film {
+    width: 30%;
+    margin: 2% 1.5%;
+    background: #e9e9e9;
+}
+
+.film_img {
+    width: 100%;
+}
+
+.film_img img {
+    width: 100%;
+    height: 400px;
+    display: inherit;
+}
+
+.film_title {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.wzlist {
+    width: 100%;
+}
+
+.wzlist li {
+    border-bottom: #9d9d9d dashed 1px;
+    border-top: #9d9d9d dashed 1px;
+}
+
+.wzlist a {
+    display: block;
+    height: 25px;
+    margin: 5px 0;
+    color: #000;
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+.page {
+    width: 285px;
+    height: 35px;
+    margin: 0 auto;
+    float: none;
+    display: table;
+}
+
+.wzbt{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #3c763d;
+    text-align: center;
+}
+
+.wznr{
+    padding: 5px 10px;
+    width: 100%;
+    background: red;
+}
+
+.page ul {
+    margin: 0 0;
+}
+
+.bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 25px;
+}
+

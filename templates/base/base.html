@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>犟松电影院</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css">
+</head>
+<body>
+<div class="top">
+    <div class="top_logo"><img src="../../static/img/logo.jpg"></div>
+    <div class="top_find">
+        <form action="/finddy" method="get">
+            <input class="top_findM form-control" type="text" name="dyname"
+                   style="width:70%; font-size: 25px; height: 60px; float:left;" value="极速蜗牛"/>
+            <input class="btn btn-success top_findB" style="height: 60px; width: 100px; font-size: 25px;" type="submit"
+                   value="搜索"/>
+        </form>
+    </div>
+</div>
+<div class="ad_01"><img src="../../static/img/ad01.jpg"></div>
+<div class="ad_01"><img src="../../static/img/ad05.gif"></div>
+<div class="nav">
+    <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/list/?lb=1">院线热映</a></li>
+        <li><a href="/list/?lb=2">人生必看</a></li>
+        <li><a href="/wz/">作者随笔</a></li>
+    </ul>
+</div>
+<div class="ad_01"><img src="../../static/img/ad04.gif"></div>
+<div class="film_main">
+    {% block main %}
+    {% endblock %}
+</div>
+<div class="ad_01"><img src="../../static/img/ad03.jpg"></div>
+<div class="bottom">
+    如侵犯你的权利 <br/>请联系136697122@qq.com<br/>犟松先生 Copyright © 2004 - 2018
+</div>
+</body>
+</html>
